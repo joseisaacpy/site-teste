@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="./cad-style.css" />
+  </head>
+  <body>
+    <form id="cadastroForm">
+      <h2>Cadastro</h2>
+
+      <!-- Seleção de tipo de usuário -->
+      <label for="tipo">Tipo de usuário:</label>
+      <select id="tipo" onchange="mostrarCamposEspecificos()">
+        <option value="">Selecione...</option>
+        <option value="aluno">Aluno</option>
+        <option value="professor">Professor</option>
+      </select>
+
+      <!-- Campos gerais -->
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <!-- Campos específicos para Aluno -->
+      <div id="camposAluno" class="hidden">
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" name="matricula" />
+
+        <label for="turma">Turma:</label>
+        <input type="text" id="turma" name="turma" />
+      </div>
+
+      <!-- Campos específicos para Professor -->
+      <div id="camposProfessor" class="hidden">
+        <label for="areaEspecialidade">Área de Especialidade:</label>
+        <input type="text" id="areaEspecialidade" name="areaEspecialidade" />
+
+        <label for="registroProfissional">Registro Profissional:</label>
+        <input
+          type="text"
+          id="registroProfissional"
+          name="registroProfissional"
+        />
+      </div>
+
+      <!-- Botão de envio -->
+      <button type="submit" class="btn-submit">Cadastrar</button>
+
+      <!-- Botões de limpar e voltar -->
+      <div class="btn-group">
+        <button type="button" class="btn-clear" onclick="limparFormulario()">
+          Limpar
+        </button>
+        <button type="button" class="btn-back" onclick="voltarPagina()">
+          Voltar
+        </button>
+      </div>
+    </form>
+
+    <script>
+      function mostrarCamposEspecificos() {
+        const tipo = document.getElementById("tipo").value;
+        const camposAluno = document.getElementById("camposAluno");
+        const camposProfessor = document.getElementById("camposProfessor");
+
+        // Esconde ambos os campos específicos primeiro
+        camposAluno.classList.add("hidden");
+        camposProfessor.classList.add("hidden");
+
+        // Exibe os campos específicos de acordo com a seleção
+        if (tipo === "aluno") {
+          camposAluno.classList.remove("hidden");
+        } else if (tipo === "professor") {
+          camposProfessor.classList.remove("hidden");
+        }
+      }
+
+      function limparFormulario() {
+        document.getElementById("cadastroForm").reset();
+        mostrarCamposEspecificos(); // Esconde os campos específicos após limpar
+      }
+
+      function voltarPagina() {
+        window.location.href = "index.html"; // Substitua pelo link da sua página inicial
+      }
+    </script>
+  </body>
+</html>
