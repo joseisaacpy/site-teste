@@ -9,16 +9,14 @@
   <body>
     <!-- cabeçalho -->
     <header>
-      <!-- logo/img logo -->
       <h1 class="logo">LOGO</h1>
-      <!-- Navbar / barra de navegação -->
-      <nav>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <nav class="nav-links">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#contato">Contato</a></li>
-          <li><a href="./cad-pessoa.html" class="btn-cadastro">Cadastro</a></li>
-          <!-- Botão de cadastro -->
+          <li><a class="btn-cadastro" href="./cad-pessoa.html">Cadastre-se</a></li>
+
         </ul>
       </nav>
     </header>
@@ -37,6 +35,7 @@
             natus magnam et vero quas fugiat eos porro cupiditate commodi quam,
             impedit distinctio.
           </p>
+          <a class="btn-cadastro" href="./cad-pessoa.html">Cadastre-se</a>
         </div>
       </section>
       <!-- section -->
@@ -49,16 +48,15 @@
         </p>
         <article class="art-sobre">
           <figure>
-            <img src="./img/image.png" alt="" />
+            <img src="./img/mov.png" alt="" />
             <figcaption>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing eli
-                consectetur, adipisicing elit.
+                Movimente-se ao ar livre e viva mais! As academias ao ar livre são a opção perfeita para quem busca uma vida mais saudável e ativa. Aproveite os benefícios do sol, do ar puro e da natureza para cuidar do seu corpo e da sua mente.
               </p>
             </figcaption>
           </figure>
           <figure>
-            <img src="./img/image.png" alt="" />
+            <img src="./img/py.png" alt="" />
             <figcaption>
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing eli
@@ -69,7 +67,7 @@
         </article>
       </section>
       <!-- section galeria -->
-      <section class="container gallery-sect">
+      <section class="container gallery-sect" id="local">
         <h2>Onde estamos?</h2>
         <div class="gallery">
           <div class="gallery-item">
@@ -163,5 +161,11 @@
     <footer>
       <p>&copy; Prefeitura Municipal de José de Freitas | 2024</p>
     </footer>
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector('.nav-links');
+        nav.classList.toggle('active');
+      }
+    </script>
   </body>
 </html>
