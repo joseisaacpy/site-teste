@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* Reset básico */
 * {
   margin: 0;
@@ -7,7 +8,7 @@
 
 /* Estilos gerais */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", "Inter", Arial, sans-serif;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -46,7 +47,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 8px 12px;
+  /* padding: 8px 12px; */
   transition: all 0.3s;
 }
 
@@ -148,12 +149,12 @@ section {
 .intro .art-sobre {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem;
-  gap: 2rem;
+  margin-top: 1rem;
+  gap: 1rem;
 }
 
 .intro .art-sobre img {
-  width: 50%; /* fica bom em computadores */
+  width: 40%; /* fica bom em computadores */
   border-radius: 8px; /* Bordas arredondadas */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }

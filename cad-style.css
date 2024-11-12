@@ -1,6 +1,7 @@
 /* Estilo básico para o formulário */
 body {
-  /* background: url(https://images.pexels.com/photos/19144181/pexels-photo-19144181/free-photo-of-construcao-predio-edificio-abstrato.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); */
+  background: linear-gradient(135deg, #f3f3f3, #e6e6e6);
+
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -15,9 +16,8 @@ form {
   background-color: rgba(0, 0, 0, 0.7);
   width: 350px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 10px 10px 40px black;
 }
 form h2 {
   text-align: center;
@@ -28,18 +28,27 @@ label {
   margin-top: 10px;
 }
 
-input[type="text"],
-input[type="email"],
+input,
 select {
-  width: 90%;
+  width: 100%;
   padding: 8px;
   margin: 5px auto;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
+}
+input:focus {
+  outline: none;
+  /* border: 3px solid #0056b3; */
+  box-shadow: 1px 1px 5px #00ff00;
 }
 
 .hidden {
   display: none;
+}
+button {
+  margin-top: 1rem;
+  transition: all 0.5s;
 }
 
 .btn-submit {
