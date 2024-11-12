@@ -49,6 +49,10 @@ nav ul li a {
   text-decoration: none;
   /* padding: 8px 12px; */
   transition: all 0.3s;
+  opacity: 0.5;
+}
+nav ul li a:hover{
+  opacity: 1;
 }
 
 /* Estilo para o botão de cadastro */
@@ -64,7 +68,7 @@ nav ul li a {
   transition: all 0.3s; /* Transição suave */
 }
 #home .btn-cadastro:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 #home .btn-cadastro:active {
   transform: scale(1.1);
